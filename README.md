@@ -47,6 +47,8 @@ The VM guarantees:
 
 ## Project Structure
 
+```
+
 sandbox_vm/
 vm.py
 verifier.py
@@ -68,7 +70,7 @@ long2.bc
 
 cli.py
 README.md
-
+```
 
 ---
 
@@ -77,17 +79,24 @@ README.md
 ### Single Program
 ```bash
 python3 cli.py run examples/safe.bc
+```
 
 ### Multiple Programs (with scheduling)
 ```bash
 python3 cli.py run examples/safe.bc examples/safe.bc
+```
 
-### Run tests
+---
 
+## Run tests
+
+```bash
 python3 -m unittest
+```
 
-### Example Outputs
+## Example Outputs
 
+```
 examplesexamples/safe.bc: Verification successful
 
 From Q1 → Used: 5, Finished: True
@@ -119,23 +128,25 @@ Process 0:
   R5: 0
   R6: 0
   R7: 0
+```
 
 ---
 
-### Key Concepts
+## Key Concepts
 
-Verifier: Performs static analysis to ensure safety before execution
-Virtual Machine (VM): Executes bytecode instructions
-Process: Encapsulates execution state (registers, memory, instruction pointer)
-Scheduler: Manages multiple processes using a multi-level feedback queue
+-Verifier: Performs static analysis to ensure safety before execution
+-Virtual Machine (VM): Executes bytecode instructions
+-Process: Encapsulates execution state (registers, memory, instruction pointer)
+-Scheduler: Manages multiple processes using a multi-level feedback queue
 
-### Summary
+---
+
+## Summary
 
 This project demonstrates:
-
-Safe execution of low-level programs
-Static program analysis
-Virtual machine design
-Basic operating system scheduling concepts
+-Safe execution of low-level programs
+-Static program analysis
+-Virtual machine design
+-Basic operating system scheduling concepts
 
 
